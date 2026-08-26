@@ -1,0 +1,206 @@
+# ==========================================================
+#  Bastion — античит / антикраш / антилаг
+# ==========================================================
+
+messages:
+  kick: |
+    §c§lВы были замечены в использовании читов.
+    §7Лог о вашем поведении был отправлен администратором
+  alert: "§8[§cBastion§8] §f%player% §7провалил §c%check% §7(VL %vl%) §8%details%"
+
+general:
+  # игроки с bastion.bypass не проверяются
+  respect-bypass-permission: true
+  # сколько тиков после телепорта/респавна игрок не проверяется движением
+  exempt-ticks-after-teleport: 20
+  # каждые N секунд VL уменьшается на 1
+  vl-decay-seconds: 25
+  # писать алерты в консоль
+  console-alerts: true
+
+# ---------- ПВП-МЕТКА ----------
+pvp-tag:
+  enabled: true
+  seconds: 30
+  bossbar-title: "§cРежим ПВП §7— §f%seconds%с"
+  # смерть при выходе в бою
+  kill-on-logout: true
+  # запрет телепортов во время боя
+  block-teleport: true
+  # запрет этих команд во время боя (без слэша)
+  blocked-commands: [spawn, home, tp, tpa, tpaccept, warp, hub, lobby, rtp, back]
+
+# ---------- КАСТОМНОЕ ЗАЧАРОВАНИЕ ----------
+custom-enchants:
+  # "Перо" на ботинках = работает как NoFall, проверка NoFall не срабатывает
+  feather:
+    lore-keyword: "Перо"
+    pdc-key: "feather"
+
+# ---------- ПРОВЕРКИ ----------
+# max-vl: сколько нарушений до кика. 0 = только алерт, без наказания
+checks:
+  FLIGHT:        { enabled: true,  max-vl: 8 }
+  INFINITY_JUMP: { enabled: true,  max-vl: 6 }
+  HIGH_JUMP:     { enabled: true,  max-vl: 8 }
+  LONG_JUMP:     { enabled: true,  max-vl: 10 }
+  SPEED:         { enabled: true,  max-vl: 14 }
+  TIMER:         { enabled: true,  max-vl: 10 }
+  JESUS:         { enabled: true,  max-vl: 8 }
+  SPIDER:        { enabled: true,  max-vl: 8 }
+  PHASE:         { enabled: true,  max-vl: 5 }
+  NOFALL:        { enabled: true,  max-vl: 8 }
+  STEP:          { enabled: true,  max-vl: 10 }
+  ANTI_VOID:     { enabled: true,  max-vl: 6 }
+  CLICK_TP:      { enabled: true,  max-vl: 4 }
+  GUI_MOVE:      { enabled: true,  max-vl: 10 }
+  NO_SLOW:       { enabled: true,  max-vl: 12 }
+  VELOCITY:      { enabled: true,  max-vl: 14 }
+  REVERSE_STEP:  { enabled: true,  max-vl: 10 }
+  ELYTRA_FLY:    { enabled: true,  max-vl: 8 }
+  ELYTRA_BOOST:  { enabled: true,  max-vl: 10 }
+  BOAT_FLY:      { enabled: true,  max-vl: 8 }
+  ENTITY_SPEED:  { enabled: true,  max-vl: 12 }
+  ENTITY_CONTROL:{ enabled: true,  max-vl: 8 }
+  MOUNT_BYPASS:  { enabled: true,  max-vl: 6 }
+  ANCHOR:        { enabled: true,  max-vl: 8 }
+  KILLAURA:      { enabled: true,  max-vl: 8 }
+  AIMBOT:        { enabled: true,  max-vl: 12 }
+  REACH:         { enabled: true,  max-vl: 10 }
+  HITBOX:        { enabled: true,  max-vl: 10 }
+  AUTOCLICKER:   { enabled: true,  max-vl: 12 }
+  MULTIAURA:     { enabled: true,  max-vl: 5 }
+  CRITICALS:     { enabled: true,  max-vl: 14 }
+  AUTO_TOTEM:    { enabled: true,  max-vl: 6 }
+  ARROW_SPAM:    { enabled: true,  max-vl: 6 }
+  ARROW_DODGE:   { enabled: true,  max-vl: 8 }
+  FLAMETHROWER:  { enabled: true,  max-vl: 6 }
+  AUTO_ANVIL:    { enabled: true,  max-vl: 5 }
+  AUTO_BED:      { enabled: true,  max-vl: 5 }
+  AUTO_CRYSTAL:  { enabled: true,  max-vl: 6 }
+  SCAFFOLD:      { enabled: true,  max-vl: 10 }
+  AIR_PLACE:     { enabled: true,  max-vl: 3 }
+  TOWER:         { enabled: true,  max-vl: 8 }
+  SURROUND:      { enabled: true,  max-vl: 6 }
+  SELF_TRAP:     { enabled: true,  max-vl: 6 }
+  BURROW:        { enabled: true,  max-vl: 3 }
+  LIQUID_PLACE:  { enabled: true,  max-vl: 4 }
+  NUKER:         { enabled: true,  max-vl: 4 }
+  VEIN_MINER:    { enabled: true,  max-vl: 5 }
+  SPEED_MINE:    { enabled: true,  max-vl: 8 }
+  PACKET_MINE:   { enabled: true,  max-vl: 6 }
+  FAST_USE:      { enabled: true,  max-vl: 8 }
+  AUTO_REPLENISH:{ enabled: true,  max-vl: 8 }
+  CHEST_BYPASS:  { enabled: true,  max-vl: 4 }
+  CHEST_STEALER: { enabled: true,  max-vl: 8 }
+  INVENTORY_MOVE:{ enabled: true,  max-vl: 10 }
+  POTION_SPOOF:  { enabled: true,  max-vl: 5 }
+  XRAY:          { enabled: true,  max-vl: 0 }
+  CHAT_SPAM:     { enabled: true,  max-vl: 8 }
+  COMMAND_SPAM:  { enabled: true,  max-vl: 8 }
+  PACKET_SPAM:   { enabled: true,  max-vl: 2 }
+  BOOK_CRASH:    { enabled: true,  max-vl: 1 }
+  SIGN_CRASH:    { enabled: true,  max-vl: 1 }
+  ITEM_CRASH:    { enabled: true,  max-vl: 1 }
+  OFFHAND_CRASH: { enabled: true,  max-vl: 2 }
+  INVALID_PACKET:{ enabled: true,  max-vl: 2 }
+  KEEPALIVE_SPOOF:{ enabled: true, max-vl: 3 }
+  LAG_MACHINE:   { enabled: true,  max-vl: 5 }
+
+# ---------- ПОРОГИ ДВИЖЕНИЯ ----------
+movement:
+  # средняя скорость (блоков/тик) за окно, выше которой считается читом
+  max-sprint-speed: 0.45
+  speed-average-ticks: 20
+  # максимальная высота прыжка над землёй
+  max-jump-height: 1.30
+  # максимальная горизонталь за один прыжок
+  max-jump-distance: 5.2
+  # сколько тиков в воздухе без снижения = флай
+  flight-air-ticks: 22
+  # move-пакетов в секунду (ваниль ~20)
+  max-move-packets: 25
+  # телепорт за один пакет
+  max-single-move: 8.0
+
+# ---------- ПОРОГИ БОЯ ----------
+combat:
+  max-reach-survival: 3.05
+  reach-lag-compensation: 0.6
+  max-attack-angle: 85.0
+  max-cps: 20
+  # минимальный интервал натяжения лука (мс)
+  min-bow-draw-ms: 120
+  # мс между потерей тотема и новым тотемом в левой руке
+  min-totem-swap-ms: 120
+
+# ---------- БЛОКИ ----------
+blocks:
+  max-place-per-second: 12
+  max-break-per-second: 12
+  # минимальная доля ванильного времени ломания (0.75 = ломать можно не быстрее 75%)
+  min-break-time-ratio: 0.72
+  # сколько блоков вокруг себя за 700мс = surround
+  surround-blocks: 4
+  # радиус нюкера
+  nuker-radius: 5
+
+# ---------- ПАКЕТЫ / АНТИКРАШ ----------
+packets:
+  enabled: true
+  # общий лимит входящих пакетов в секунду
+  max-total-per-second: 500
+  limits:
+    move: 60
+    swing: 40
+    dig: 45
+    use-entity: 40
+    window-click: 40
+    creative: 12
+    held-slot: 30
+    payload: 30
+    swap-hand: 20
+    keepalive: 8
+    sign: 6
+    book: 4
+    place: 40
+  # книги
+  max-book-pages: 50
+  max-book-page-chars: 1000
+  max-book-total-chars: 12000
+  # предметы
+  max-item-nbt-bytes: 20000
+  max-enchant-level: 255
+  max-anvil-name-chars: 48
+  max-sign-line-chars: 100
+
+# ---------- ЧАТ ----------
+chat:
+  min-message-interval-ms: 700
+  max-message-chars: 256
+  block-repeat-within-ms: 5000
+  min-command-interval-ms: 400
+
+# ---------- АНТИ ЛАГ-МАШИНА ----------
+lag:
+  enabled: true
+  max-entities-per-chunk: 150
+  max-items-per-chunk: 96
+  max-tnt-per-chunk: 32
+  max-falling-blocks-per-chunk: 64
+  max-minecarts-per-chunk: 24
+  max-armorstands-per-chunk: 40
+  # срабатываний редстоуна в чанке за секунду
+  max-redstone-per-chunk: 900
+  # заморозка редстоуна в чанке (секунд) при превышении
+  redstone-freeze-seconds: 20
+  # передач хопперов в чанке за секунду
+  max-hopper-moves-per-chunk: 400
+  # порталов создаваемых в минуту одним игроком
+  max-portals-per-minute: 6
+  # прогрузок чанков одним игроком в секунду
+  max-chunk-loads-per-second: 25
+  # ограничение цепных взрывов
+  max-explosions-per-second-per-chunk: 12
+  # автоочистка дропа
+  item-cleanup-seconds: 300

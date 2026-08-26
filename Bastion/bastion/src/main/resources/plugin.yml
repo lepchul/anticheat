@@ -1,0 +1,22 @@
+name: Bastion
+version: '${project.version}'
+main: ru.lepchul.bastion.Bastion
+api-version: '1.20'
+author: lepchul
+description: Anticheat + anti-crash + anti-lag-machine
+load: POSTWORLD
+
+commands:
+  bastion:
+    description: Управление античитом
+    aliases: [ac, bs]
+    usage: /bastion <reload|alerts|verbose|info|vl|exempt>
+    permission: bastion.command
+
+permissions:
+  bastion.command:
+    default: op
+  bastion.alerts:
+    default: op
+  bastion.bypass:
+    default: false
