@@ -34,20 +34,40 @@ public class PlayerData {
 
     // ---------- движение ----------
     public Location lastLocation;
+    public Location safeLocation;
     public double lastDeltaY;
     public double lastGroundY;
     public int airTicks;
     public int groundTicks;
-    public int jumpsSinceGround;
-    public double jumpStartX, jumpStartZ;
     public boolean wasOnGround = true;
     public final Deque<Double> speedSamples = new ArrayDeque<>();
     public int movePacketsThisSecond;
     public long moveSecondStart = System.currentTimeMillis();
     public int exemptTicks;
     public long lastTeleport;
-    public int noDescendTicks;
     public double fallDistance;
+
+    // предсказание вертикали
+    public double predictedY;
+    public int graceTicks;
+    public int hoverTicks;
+
+    // прыжок
+    public boolean jumpLaunch;
+    public double launchX, launchY, launchZ;
+
+    // шаг вверх
+    public double stepAccum;
+    public int stepTicks;
+
+    // прочее
+    public int jesusTicks;
+    public int voidTicks;
+    public int iceTicks;
+    public int glideTicks;
+    public double glideAscend;
+    public int setbacks;
+    public long lastSetback;
 
     // ---------- бой ----------
     public long lastAttack;
