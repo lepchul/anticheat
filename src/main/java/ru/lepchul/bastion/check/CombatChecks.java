@@ -111,7 +111,7 @@ public class CombatChecks implements Listener {
         }
 
         // ---------- Criticals ----------
-        if (!p.isOnGround() && p.getFallDistance() <= 0.0f && !p.isInsideVehicle()
+        if (!Util.onGroundBlocks(p.getLocation()) && p.getFallDistance() <= 0.0f && !p.isInsideVehicle()
                 && !Util.inLiquid(p) && !Util.onClimbable(p)
                 && !Util.hasEffect(p, org.bukkit.potion.PotionEffectType.BLINDNESS)) {
             v.flag(p, CheckType.CRITICALS, "крит без реального падения", 0.5);
